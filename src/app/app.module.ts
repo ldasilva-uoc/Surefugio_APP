@@ -41,7 +41,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   ],
   imports: [
 
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
