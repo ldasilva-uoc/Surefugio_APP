@@ -19,7 +19,7 @@ export class AuthService {
   
   login(user: Credencial): Observable<any> {
 
-    var login = this.http.post<any>('http://127.0.0.1:8000/api/auth/login', user);
+    var login = this.http.post<any>('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/login', user);
     login.subscribe(
       result => {
         this.tokenService.handleData(result.access_token);
@@ -33,18 +33,18 @@ export class AuthService {
 
   register(user: User): Observable<any> {
 
-    return this.http.post('http://127.0.0.1:8000/api/auth/register', user);
+    return this.http.post('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/register', user);
   }
 
   registerProtectora(formData: FormData): Observable<any> {
 
-    return this.http.post('http://127.0.0.1:8000/api/auth/protectora/register', formData);
+    return this.http.post('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/protectora/register', formData);
   }
 
 
   registerParticular(formData: FormData): Observable<any> {
 
-    return this.http.post('http://127.0.0.1:8000/api/auth/particular/register', formData);
+    return this.http.post('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/particular/register', formData);
   }
 
 
@@ -53,6 +53,6 @@ export class AuthService {
   logout(): Observable<any> {
 
     this.tokenService.removeToken();
-    return this.http.post('http://127.0.0.1:8000/api/auth/logout',null);
+    return this.http.post('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/logout',null);
   }
 }

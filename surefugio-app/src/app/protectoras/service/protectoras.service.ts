@@ -10,10 +10,10 @@ export class ProtectorasService {
   constructor(private http: HttpClient) { }
 
   getProtectoras(): Observable<any> {
-    return this.http.get('http://127.0.0.1:8000/api/list/protectoras');
+    return this.http.get('http://surefugio.eu-west-3.elasticbeanstalk.com/api/list/protectoras');
   }
 
   Voluntariado(idP: number|undefined){
-    return this.http.post('http://127.0.0.1:8000/api/auth/voluntariado/'+idP,null)
+    return this.http.post('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/voluntariado/'+idP,null)
   }
 }

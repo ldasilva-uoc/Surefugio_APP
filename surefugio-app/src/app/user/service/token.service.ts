@@ -8,8 +8,8 @@ export class TokenService {
   constructor() { }
 
   private issuer = {
-    login: 'http://127.0.0.1:8000/api/auth/login',
-    register: 'http://127.0.0.1:8000/api/auth/register'
+    login: 'http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/login',
+    register: 'http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/register'
   }
 
 

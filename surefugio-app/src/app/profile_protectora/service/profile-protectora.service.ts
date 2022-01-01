@@ -12,12 +12,12 @@ export class ProfileProtectoraService {
 
   getprotectora(): Observable<any> {
     console.log('service profile protectora')
-    return this.http.get('http://127.0.0.1:8000/api/auth/protectora');
+    return this.http.get('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/protectora');
   }
 
   editProtectora(formData: FormData): Observable<any> {
     console.log('service profile protectora')
-    return this.http.post('http://127.0.0.1:8000/api/auth/protectora/edit',formData);
+    return this.http.post('http://surefugio.eu-west-3.elasticbeanstalk.com/api/auth/protectora/edit',formData);
   }
 
 
